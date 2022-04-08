@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: mypod
+   labels:
+     app: myapp
+   annotations:
+     imageregestry: "https://hub.docker.com"
+spec:
+  containers:
+     - name: nginx
+       image: nginx
+       ports:
+        - containerPort: 80
